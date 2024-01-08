@@ -31,6 +31,7 @@ let WeatherApp = () => {
 			return 0;
 		} else {
 			let url = `https://api.openweathermap.org/data/2.5/weather?q=${ element[ 0 ].value }&appid=${ apiKey }`;
+			console.log( url);
 			let response = await fetch( url );
 			weatherData = await response.json();
 
